@@ -1,0 +1,18 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        # want to lower case
+        # want only numbers and letters
+        # trim ws
+        # want only read forward and backwards
+        newStr = ''
+        for ch in s:
+            if ch.isalnum():
+                newStr += ch.lower()
+        return newStr == newStr[::-1]
+
+        # s = s.lower()
+        # s = "".join(char for char in s if char.isalnum())
+        # if s == s[::-1]:
+        #     return True
+        # else:
+        #     return False
